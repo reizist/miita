@@ -17,6 +17,7 @@ gem 'haml-rails'
 gem 'quiet_assets'
 gem 'font-awesome-rails'
 
+gem 'devise'
 group :development do
   gem 'terminal-notifier-guard'
   gem 'spring'
