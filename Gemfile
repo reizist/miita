@@ -18,6 +18,8 @@ gem 'quiet_assets'
 gem 'font-awesome-rails'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
 group :development do
   gem 'terminal-notifier-guard'
   gem 'spring'
