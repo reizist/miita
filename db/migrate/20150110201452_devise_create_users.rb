@@ -35,7 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :screen_name
       t.string :name
       t.string :icon_url
-      t.boolean :admin
+      t.boolean :admin, null: false, default: false
 
       t.timestamps
     end
