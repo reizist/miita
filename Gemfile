@@ -17,6 +17,8 @@ gem 'haml-rails'
 gem 'quiet_assets'
 gem 'font-awesome-rails'
 
+gem 'paper_trail', '~> 3.0.6'
+
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
