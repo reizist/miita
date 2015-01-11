@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
   validates :screen_name, presence: true
   validates :name, presence: true
 
+  after_destroy do
+    Article.where(user: self).delete_all
+  end
+
   def self.find_for_twitter_oauth(auth, signed_in_resource=nil) 
     user = User.find_or_initialize_by(provider: auth.provider, uid: auth.uid)
     if user.new_record?
