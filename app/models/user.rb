@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :omniauthable # :registerable,
          # :recoverable, :rememberable, :trackable, :validatable
  
+  has_many :articles, inverse_of: :user
+
   validates :provider, presence: true
   validates :uid, presence: true, uniqueness: true
   validates :screen_name, presence: true
