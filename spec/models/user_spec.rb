@@ -44,4 +44,15 @@ RSpec.describe User, :type => :model do
       specify { expect(subject).not_to be_valid }
     end
   end
+
+  describe '#destroy' do
+    let!(:user) { create(:user) }
+    let!(:article) { create(:article, user: user) }
+
+    context 'userをdestoryしたとき' do
+      it 'userの持つarticleが全て削除される' do
+        expect { user.destroy }.to change(Article, :count).by(-1)
+      end
+    end
+  end
 end
