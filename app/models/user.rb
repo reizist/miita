@@ -3,6 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :omniauthable # :registerable,
          # :recoverable, :rememberable, :trackable, :validatable
+ 
+  validates :provider, presence: true
+  validates :uid, presence: true, uniqueness: true
+  validates :screen_name, presence: true
+  validates :name, presence: true
+
   def self.find_for_twitter_oauth(auth, signed_in_resource=nil) 
     user = User.find_or_initialize_by(provider: auth.provider, uid: auth.uid)
     if user.new_record?
