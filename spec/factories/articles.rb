@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :article do
-    user nil
-    title "MyString"
-    content "MyText"
+    user { create(:user) } 
+    title { Forgery(:basic).text } 
+    content { Forgery(:lorem_ipsum).words(10) } 
   end
 end
