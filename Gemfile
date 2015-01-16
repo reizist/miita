@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'rails', '4.1.6'
-gem 'mysql2'
 
 
 gem 'sass-rails', '~> 4.0.3'
@@ -22,6 +21,7 @@ gem 'paper_trail', '~> 3.0.6'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
+
 group :development do
   gem 'terminal-notifier-guard'
   gem 'spring'
@@ -31,6 +31,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'mysql2'
   gem 'spring-commands-rspec'
   gem 'pry-rails'
 
@@ -42,6 +43,11 @@ group :development, :test do
   gem 'guard-spring'
 
   # gem 'bullet'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :doc do

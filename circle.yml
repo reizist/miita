@@ -1,0 +1,20 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - heroku maintenance:on --app novels-revision 
+      - git push git@heroku.com:novels-revision.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app novels-revision:
+          timeout: 400 # if your deploys take a long time
+      - heroku maintenance:off --app novels-revision 
+
+machine:
+  ruby:
+    version: 2.2.0
+
+test:
+  pre:
+    - "export PULL_REQUEST_ID=`bundle exec prid reizist/novels` && if [ $PULL_REQUEST_ID ]; then cd .. && git clone git@github.com:reizist/novels.git for_pronto && cd for_pronto && git checkout -b ${CIRCLE_BRANCH} remotes/origin/${CIRCLE_BRANCH} && gem install pronto && pronto run -c master -f github_pr && cd ../novels; else echo 'current branch is not pull request'; fi"
+notify:
+  webhooks:
+    - url: https://hooks.slack.com/services/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
