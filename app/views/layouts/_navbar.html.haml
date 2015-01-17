@@ -22,5 +22,4 @@
               %li.divider
         - else
           %li
-            .btn.btn-dark
-              = link_to 'ログイン', user_omniauth_authorize_path(:twitter)
+            = link_to 'ログイン', user_omniauth_authorize_path(:twitter)
