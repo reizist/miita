@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20150111172210) do
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",              default: "",    null: false
+    t.string   "email"
     t.string   "encrypted_password", default: "",    null: false
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "screen_name"
+    t.string   "provider",                           null: false
+    t.string   "uid",                                null: false
+    t.string   "screen_name",                        null: false
     t.string   "name"
     t.string   "icon_url"
     t.boolean  "admin",              default: false, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150111172210) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
 
   create_table "versions", force: true do |t|
     t.string   "item_type",  null: false
