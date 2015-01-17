@@ -9,6 +9,10 @@
     = csrf_meta_tags
   %body
     = render 'layouts/navbar'
-    = render 'layouts/header'
-    = yield
+    .container
+      - if user_signed_in?
+        = render 'layouts/main'
+      - else 
+        = render 'layouts/header'
+      = yield
     = render 'layouts/footer'
