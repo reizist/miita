@@ -21,6 +21,7 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 
 gem 'paper_trail', '~> 3.0.6'
+gem 'diffy'
 
 gem 'devise'
 gem 'omniauth'
