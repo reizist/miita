@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'haml-rails'
 gem 'quiet_assets'
 gem 'font-awesome-rails'
+gem 'simple_form'
 
 gem 'paper_trail', '~> 3.0.6'
 
