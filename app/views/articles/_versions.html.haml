@@ -14,5 +14,7 @@
               %i.glyphicon.glyphicon-time
               = version.reify.updated_at
         .timeline-body
-          %p
-            = article.content
+          - pre = version.previous.reify
+          - if pre.present?
+            %p
+              = "#{diff(pre.content, article.content, {include_plus_and_minus_in_html: true})}".html_safe
