@@ -14,11 +14,6 @@ body {
 
 body {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: image-url('bg2.jpeg') no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
 }
 
 .text-vertical-center {
@@ -87,7 +82,6 @@ hr.small {
 /* Footer */
 
 .footer {
-  position: absolute;
   padding: 100px 0;
   bottom: 0;
   width: 100%;

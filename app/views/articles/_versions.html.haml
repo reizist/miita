@@ -1,0 +1,18 @@
+%ul.timeline
+  - @article.versions.reverse.each do |version|
+    - article = version.reify
+    - next if article.blank?
+    %li
+      .timeline-badge.info
+        %i.glyphicon.glyphicon-hand-left
+      .timeline-panel
+        .timeline-heading
+          %h4.timeline-title 
+            = "REV##{version.index}: #{article.title}"
+          %p
+            %small.text-muted
+              %i.glyphicon.glyphicon-time
+              = version.reify.updated_at
+        .timeline-body
+          %p
+            = article.content

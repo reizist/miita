@@ -2,8 +2,8 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :title
-    = f.input :content
+    = f.input :title, placeholder: 'タイトル', input_html: { class: 'input-lg' }
+    = f.input :content, input_html: { rows: 30 } 
 
   .form-actions
     = f.button :submit
