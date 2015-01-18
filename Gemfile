@@ -27,6 +27,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+gem 'github-markdown'
+
 group :development do
   gem 'terminal-notifier-guard'
   gem 'spring'

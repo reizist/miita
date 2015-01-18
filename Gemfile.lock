@@ -76,6 +76,7 @@ GEM
     forgery (0.6.0)
     formatador (0.2.5)
     fssm (0.2.10)
+    github-markdown (0.6.8)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -253,6 +254,7 @@ DEPENDENCIES
   factory_girl_rails
   font-awesome-rails
   forgery
+  github-markdown
   guard-rspec
   guard-spring
   haml-rails
