@@ -1,0 +1,9 @@
+= simple_form_for(@article) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title, placeholder: 'タイトル', input_html: { class: 'input-lg' }
+    = f.input :content, input_html: { rows: 30 } 
+
+  .form-actions
+    = f.button :submit
