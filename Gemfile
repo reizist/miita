@@ -27,7 +27,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
-gem 'github-markdown'
+gem 'redcarpet'
 gem 'coderay'
 
 group :development do
