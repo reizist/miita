@@ -9,6 +9,8 @@
         .timeline-heading
           %h4.timeline-title 
             = "REV##{version.index}: #{article.title}"
+            %button.btn.btn-default.btn-sm{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+              = link_to 'このバージョンを見る', article_path(article, rev: version.index)
           %p
             %small.text-muted
               %i.glyphicon.glyphicon-time
@@ -18,3 +20,6 @@
           - if pre.present?
             %p
               = "#{diff(pre.content, article.content, {include_plus_and_minus_in_html: true})}".html_safe
+          - else
+            %p
+              = article.content

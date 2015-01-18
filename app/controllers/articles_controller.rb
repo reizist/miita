@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article = @article.versions[params[:rev].to_i].reify if params[:rev].present?
   end
 
   # GET /articles/new
