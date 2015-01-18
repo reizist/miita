@@ -1,4 +1,5 @@
 # Novels
+* ![2015-01-18 15 21 06](https://cloud.githubusercontent.com/assets/4850156/5791631/d9177bde-9f25-11e4-8efe-319a55ff7671.jpg)
 
 [![Circle CI](https://circleci.com/gh/reizist/novels.svg?style=svg)](https://circleci.com/gh/reizist/novels)
 
