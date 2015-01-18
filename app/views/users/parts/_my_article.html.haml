@@ -1,0 +1,10 @@
+#myTabContent.tab-content
+  #myArticles.tab-pane.fade.in.active
+    .list-group
+      - @my_articles.each do |article|
+        = link_to article_path(article), class: 'list-group-item' do
+          %h6
+            = "#{article.user.screen_name}さんが投稿しました"
+          %h4
+            = article.title
+    
