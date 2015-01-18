@@ -246,6 +246,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap-sass
+  coderay
   coffee-rails (~> 4.0.0)
   compass-rails
   database_rewinder

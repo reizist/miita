@@ -28,6 +28,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 
 gem 'github-markdown'
+gem 'coderay'
 
 group :development do
   gem 'terminal-notifier-guard'
