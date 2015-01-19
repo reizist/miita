@@ -27,6 +27,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+gem 'redcarpet'
+gem 'coderay'
+
 group :development do
   gem 'terminal-notifier-guard'
   gem 'spring'

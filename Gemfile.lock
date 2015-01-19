@@ -173,6 +173,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    redcarpet (3.2.2)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rspec (3.1.0)
@@ -245,6 +246,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap-sass
+  coderay
   coffee-rails (~> 4.0.0)
   compass-rails
   database_rewinder
@@ -269,6 +271,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails (= 4.1.6)
   rails_12factor
+  redcarpet
   rspec-rails
   sass-rails (~> 4.0.3)
   simple_form

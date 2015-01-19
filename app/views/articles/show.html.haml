@@ -13,6 +13,9 @@
         %li
           = link_to '削除する', article_path(@article), method: :delete
   .article-content
-    = simple_format(@article.content)
+    - if markdown?(@article.title)
+      = markdown(@article.content)
+    - else
+      = simple_format(@article.content)
 
 = render 'articles/versions'
