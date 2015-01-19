@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @my_articles = @user.articles.order('created_at desc')
+    @my_articles = @user.articles.feed
   end
 
   # GET /users/1/edit

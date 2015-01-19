@@ -4,4 +4,5 @@ class Article < ActiveRecord::Base
   belongs_to :user
 
   validates :title, presence: true
+  scope :feed, -> { order('created_at desc') }
 end
