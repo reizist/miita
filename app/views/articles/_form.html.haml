@@ -1,9 +1,13 @@
-= simple_form_for(@article) do |f|
-  = f.error_notification
+.wrapper
+  = form_for(@article) do |f|
+    .row
+      .col-sm-12
+        .form-title
+          = f.text_field :title, placeholder: 'タイトル', class: 'form-control'
+    .row
+      .col-sm-12
+        .form-body
+          = f.text_area :content, rows: 30, class: 'form-control'
 
-  .form-inputs
-    = f.input :title, placeholder: 'タイトル', input_html: { class: 'input-lg' }
-    = f.input :content, input_html: { rows: 30 } 
-
-  .form-actions
-    = f.button :submit
+    .form-actions
+      = f.button :submit, class: 'btn btn-lg btn-primary'
