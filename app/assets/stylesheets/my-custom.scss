@@ -1,3 +1,8 @@
+.navbar-default {
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
 ul.dropdown-menu {
   a {
     color: #222222 !important;
@@ -202,4 +207,36 @@ li.ins {
 
 .user-profiles {
   height: 50px;
+}
+
+.wrapper {
+  background-color: #f8fafb;
+  min-width: 800px;
+  padding: 20px 15px 30px;
+}
+
+.form-title input {
+  height: 56px;
+  line-height: 1.4;
+  font-size: 28px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.form-body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: relative;
+  display: table;
+  width: 100%;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 15px;
 }
