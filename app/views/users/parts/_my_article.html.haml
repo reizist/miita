@@ -2,9 +2,11 @@
   #myArticles.tab-pane.fade.in.active
     .list-group
       - @my_articles.each do |article|
-        = link_to article_path(article), class: 'list-group-item' do
-          %h6
-            = "#{article.user.screen_name}さんが投稿しました"
-          %h4
-            = article.title
-    
+        = link_to article_path(article), class: 'list-group-item media' do
+          .media-left
+            = image_tag article.user.icon_url
+          .media-body
+            %h6
+              = "#{article.user.screen_name}が#{article.created_at.strftime('%Y/%m/%d')}に投稿"
+            %h4
+              = article.title

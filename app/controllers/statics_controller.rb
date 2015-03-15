@@ -1,5 +1,5 @@
 class StaticsController < ApplicationController
   def home
-    @articles = Article.all
+    @articles = Article.feed
   end
 end

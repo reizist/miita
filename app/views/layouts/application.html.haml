@@ -3,8 +3,9 @@
 %html
 
   %head
-    %title MyApp
+    %title DocShare 
     = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Josefin+Slab', :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
@@ -12,6 +13,4 @@
     - unless user_signed_in?
       = render 'layouts/header'
     - else
-      .container
-        = yield
-    = render 'layouts/footer'
+      = yield

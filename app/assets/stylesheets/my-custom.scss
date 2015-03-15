@@ -1,3 +1,27 @@
+.navbar-brand {
+  font-family: Josefin Slab;
+  font-size: 25px;
+  
+}
+
+.navbar-default {
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+.main-header-copy {
+  margin-bottom: 10px;
+}
+
+.btn-primary a {
+  color: #fff;
+  text-decoration: none;
+}
+
 ul.dropdown-menu {
   a {
     color: #222222 !important;
@@ -202,4 +226,61 @@ li.ins {
 
 .user-profiles {
   height: 50px;
+}
+
+.wrapper {
+  background-color: #f8fafb;
+  min-width: 800px;
+  padding: 20px 15px 30px;
+}
+
+.form-title input {
+  height: 56px;
+  line-height: 1.4;
+  font-size: 28px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.form-body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: relative;
+  display: table;
+  width: 100%;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 15px;
+  textarea {
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-size: 1.4em;
+  }
+}
+
+.media-heading i {
+  margin: 0 5px 0 5px;
+}
+
+.article-title {
+}
+
+.article-header {
+  background: #f2f5f7;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e8ed;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+
+.article-content {
+  padding-bottom: 20px;
 }
