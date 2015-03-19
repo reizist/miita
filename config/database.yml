@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: novels_web_production
-  username:
-  password: <%= ENV['DB_DATABASE_PASSWORD'] %>
+  database: d40ufucs0p1igi 
+  username: cwnqbnqhgfbrmy 
+  port: 5432
+  password: <%= ENV['DB_PASSWORD'] %>
