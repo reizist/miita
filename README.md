@@ -1,7 +1,6 @@
 # Miita
-* [novel revision](http://novels-revision.herokuapp.com/)
 
-[![Circle CI](https://circleci.com/gh/reizist/novels.svg?style=svg)](https://circleci.com/gh/reizist/novels)
+[![Circle CI](https://circleci.com/gh/reizist/miita.svg?style=svg)](https://circleci.com/gh/reizist/miita)
 
 ## 環境
 * ruby 2.2.0
@@ -10,4 +9,4 @@
 ## 何これ
 * Qiitaをローカル参照するための俺得クローンです
 
-![2015-01-18 15 21 06](https://cloud.githubusercontent.com/assets/4850156/5791631/d9177bde-9f25-11e4-8efe-319a55ff7671.jpg) 
+![2015-01-18 15 21 06](https://cloud.githubusercontent.com/assets/4850156/12218656/89a15662-b769-11e5-8989-8698a8e983a3.png)
