@@ -20,3 +20,4 @@ vendor/bundle
 .DS_Store
 coverage/
 data/
+.envrc
