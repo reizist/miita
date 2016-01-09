@@ -28,6 +28,7 @@ gem 'omniauth-twitter'
 
 gem 'redcarpet'
 gem 'coderay'
+gem 'kaminari'
 
 group :development do
   gem 'terminal-notifier-guard'
