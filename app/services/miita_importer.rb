@@ -17,9 +17,15 @@ class MiitaImporter
 
   def expand(meta_file, id)
     yml = meta_file[id]
-    user, title, tags = yml["user"] , yml["title"], yml["tags"]
+    user, title, tags, created_at = yml["user"] , yml["title"], yml["tags"], yml["created_at"]
     body = File.open("#{POSTS_DIR}/#{id}.md").read
-    OpenStruct.new(post_id: id, user: user, title: title, tags: tags, body: body)
+    OpenStruct.new(
+      post_id: id,
+      user: user,
+      title: title,
+      tags: tags, body: body,
+      created_at: created_at
+    )
   end
 
   def save_record(meta_object)
@@ -32,7 +38,8 @@ class MiitaImporter
       article.update(
         user: user,
         title: meta_object.title,
-        content: meta_object.body
+        content: meta_object.body,
+        created_at: meta_object.created_at
       )
       tags.each {|tag| ArticleTag.find_or_create_by(article: article, tag: tag) }
     end
