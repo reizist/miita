@@ -28,6 +28,10 @@ module BaseApp
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :ja
 
+    config.autoload_paths += %w(
+      #{config.root}/app/services
+    )
+
     config.generators do |g|
       g.orm :active_record
       g.template_engine :haml
