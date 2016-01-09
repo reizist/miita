@@ -4,17 +4,16 @@ class MiitaImporter
   DATA_DIR = "#{Rails.root}/data"
   META_DIR = "#{DATA_DIR}/meta"
   POSTS_DIR = "#{DATA_DIR}/posts"
-  def initialize
-  end
 
   def import
     Dir.glob("#{META_DIR}/*.yml").each do |file|
       post_id = File.basename(file, '.yml')
       meta_object = expand(YAML.load_file(file), post_id)
       save_record(meta_object)
-
     end
   end
+
+  private
 
   def expand(meta_file, id)
     yml = meta_file[id]
