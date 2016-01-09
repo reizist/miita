@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'statics#home'
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :articles
   resources :users, only: [:show, :update, :edit]
 
