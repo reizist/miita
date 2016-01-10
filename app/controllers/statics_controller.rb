@@ -1,5 +1,5 @@
 class StaticsController < ApplicationController
   def home
-    @articles = Article.feed
+    @articles = Article.feed.page(params[:page])
   end
 end

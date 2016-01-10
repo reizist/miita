@@ -8,3 +8,4 @@
           = "#{article.user.screen_name}が#{article.created_at.strftime('%Y/%m/%d')}に投稿"
         %h4
           = article.title
+  = paginate @articles

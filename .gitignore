@@ -19,3 +19,5 @@ vendor/bundle
 .secret
 .DS_Store
 coverage/
+data/
+.envrc

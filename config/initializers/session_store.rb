@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Rails.application.config.session_store :cookie_store, key: '_novels_web_session'
+Rails.application.config.session_store :cookie_store, key: '_miita_session'

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111172210) do
+ActiveRecord::Schema.define(version: 20160109203448) do
+
+  create_table "article_tags", force: true do |t|
+    t.integer  "article_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "articles", force: true do |t|
     t.integer  "user_id"
@@ -19,24 +26,24 @@ ActiveRecord::Schema.define(version: 20150111172210) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "post_id",    null: false
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "encrypted_password", default: "",    null: false
-    t.string   "provider",                           null: false
-    t.string   "uid",                                null: false
-    t.string   "screen_name",                        null: false
+  create_table "tags", force: true do |t|
     t.string   "name"
-    t.string   "icon_url"
-    t.boolean  "admin",              default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
+  create_table "users", force: true do |t|
+    t.string   "screen_name",                 null: false
+    t.string   "icon_url"
+    t.boolean  "admin",       default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "versions", force: true do |t|
     t.string   "item_type",  null: false

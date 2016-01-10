@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
   end
 
   # GET /articles/1
@@ -21,23 +21,6 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
   end
-
-  # POST /articles
-  # POST /articles.json
-  def create
-    @article = Article.new(article_params)
-    @article.user = current_user
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
