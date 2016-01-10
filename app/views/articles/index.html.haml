@@ -8,4 +8,7 @@
           = "#{article.user.screen_name}が#{article.created_at.strftime('%Y/%m/%d')}に投稿"
         %h4
           = article.title
+        - article.tags.each do |tag|
+          %span.label.label-default.m5= tag.name
+
   = paginate @articles
