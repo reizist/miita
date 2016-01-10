@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'statics#home'
   resources :articles
   resources :users, only: [:show, :update, :edit]
+  get 'search', to: 'articles#search', as: :search
 
 
   # The priority is based upon order of creation: first created -> highest priority.

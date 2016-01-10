@@ -8,8 +8,9 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.search params[:query], fields: [:title, :content]
-
+    @query ||= params[:query]
+    @articles = Article.search(@query, fields: [:title, :content], page: params[:page], per_page: 20)
+    render :index
   end
 
   # GET /articles/1

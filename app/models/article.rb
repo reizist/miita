@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  searchkick
+  searchkick highlight: [:title, :content]
 
   has_paper_trail
 

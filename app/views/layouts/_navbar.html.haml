@@ -8,6 +8,14 @@
         %span.icon-bar
       .navbar-brand.page-scroll
         = link_to 'Miita', root_path
+    .nav.navbar-nav
+      = form_tag search_path(@query), method: :get do
+        .navbar-form
+          .input-group
+            = text_field_tag :query, params[:query], class: 'form-control'
+            .input-group-btn
+              %button.button.btn.btn-default
+                = content_tag :span, '検索', class: 'glyphicon glyphicon-search'
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li.hidden
