@@ -4,12 +4,12 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.page(params[:page])
+    @articles = Article.includes(:tags).page(params[:page])
   end
 
   def search
     @query ||= params[:query]
-    @articles = Article.search(@query, fields: [:title, :content], page: params[:page], per_page: 20)
+    @articles = Article.includes(:tags).search(@query, fields: [:title, :content], page: params[:page], per_page: 20)
     render :index
   end
 
