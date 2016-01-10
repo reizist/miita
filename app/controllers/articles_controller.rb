@@ -7,6 +7,12 @@ class ArticlesController < ApplicationController
     @articles = Article.page(params[:page])
   end
 
+  def search
+    @query ||= params[:query]
+    @articles = Article.search(@query, fields: [:title, :content], page: params[:page], per_page: 20)
+    render :index
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
