@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'statics#home'
   resources :articles
   resources :users, only: [:show, :update, :edit]
+  resources :tags
   get 'search', to: 'articles#search', as: :search
 
 
