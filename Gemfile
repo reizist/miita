@@ -31,6 +31,7 @@ gem 'coderay'
 gem 'kaminari'
 
 gem 'searchkick'
+gem 'better_errors'
 
 group :development do
   gem 'terminal-notifier-guard'
